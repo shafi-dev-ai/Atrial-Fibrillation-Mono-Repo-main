@@ -1,0 +1,14 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: atrial-fibrillation-svc
+  labels:
+    app: atrial-fibrillation-api
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    protocol: TCP
+  selector:
+    app: atrial-fibrillation-api
